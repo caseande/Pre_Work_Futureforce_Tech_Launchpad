@@ -10,11 +10,12 @@ var volume = 0.25;             // 50% --must be between 0.0 and 1.0
 var guessCounter = 0;
 var pattern = [];              // declare empty array
 var clueHoldTime = 1000;       // how long to hold each clue's light/sound
-var strikes = 0;
+var strike_count = 0;
 var level = 0;                 // var that sets the length of the pattern
 var win_count = 0;
 var loss_count = 0;
 var round_count = 0;
+
 
 
 /********************************************************
@@ -73,7 +74,7 @@ function startGame()
   // init game vars
   progress = 0;
   gamePlaying = true;
-  strikes = 0;
+  strike_count = 0;
   clueHoldTime = 1000;
   round_count++;
   
@@ -104,7 +105,7 @@ function startGame()
 * stop game and reset start/stop button
 *
 ********************************************************/
-function stopGame()
+function stopGame(x)
 {
   gamePlaying = false;
   
@@ -120,7 +121,12 @@ function stopGame()
   // hide stop label text, show difficulty select text
   document.getElementById("diffTxt").classList.remove("hidden");
   document.getElementById("stopTxt").classList.add("hidden");
-  round_count--;
+  // if arg is present, decrement round count game was manually stopped
+  if(x == 1)
+    {
+      round_count--;
+    }
+  strike_count = 0;
   updateCounts();
 }
 
@@ -143,6 +149,7 @@ function updateCounts()
   document.getElementById("round").innerText = "Round: " + round_count
   document.getElementById("wins").innerText = "Wins: "+ win_count
   document.getElementById("losses").innerText = "Losses: " + loss_count
+  document.getElementById("strikes").innerText = "Strikes: " + strike_count
 }
 
 /********************************************************
@@ -154,6 +161,7 @@ function resetCounts()
   round_count = 0;
   win_count = 0;
   loss_count = 0;
+  strike_count = 0;
   updateCounts();
   document.getElementById("resetBtn").classList.add("hidden");
 }
@@ -169,6 +177,7 @@ function loseGame()
   // reset select form to default none value
   resetForm();
   loss_count++;
+  strike_count = 0;
   updateCounts();
   document.getElementById("resetBtn").classList.remove("hidden");
   // show difficulty select form
@@ -189,6 +198,7 @@ function winGame()
   // reset select form to default none value
   resetForm();
   win_count++;
+  strike_count = 0;
   updateCounts();
   document.getElementById("resetBtn").classList.remove("hidden");
   // show difficulty select form
@@ -289,12 +299,13 @@ function guess(btn)
   else
   {
     // add strike to counter, if == 3, game over
-    strikes++;
-    if (strikes == 3)
+    strike_count++;
+    updateCounts();
+    if (strike_count == 3)
       loseGame();
     else
     {
-      alert("Incorrect guess! " + "Strike: " +strikes + '\n' + "Let me repeat the pattern again");
+      alert("Incorrect guess! " + "Strike: " +strike_count + '\n' + "Let me repeat the pattern again");
       // special call to replay clue sequence without decreasing clueHoldTime
       playClueSequence(0);
     }

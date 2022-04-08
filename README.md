@@ -4,7 +4,7 @@ Amelie and Julian's Hide and Seek is a Light & Sound Memory game to apply for Co
 
 Submitted by: Casey Anderson
 
-Time spent: 15 hours spent in total
+Time spent: 16 hours spent in total
 
 Link to project: https://glitch.com/~scented-lapis-hell
 
@@ -40,6 +40,9 @@ The following **additional** features are implemented:
 * [x] Game cannot be started until a difficulty is selected
 * [x] Difficult select form is reset to default none value after every game
 * [x] Added a popup alert that displays the users strike count when a strike occurs
+* [x] Game features persistent Round, Win, Loss and Strike counters
+* [x] Game has reset button that resets counters so users don't have to refresh page to do so
+* [x] Game has dynamic button layout that starts stacked and spreads when game is started
 * [x] Clue sequence is replayed after a non-game-ending strike occurs
 * [x] Replayed Clue sequences do not decrease the clue hold time, but instead replay at the same interval
 
@@ -47,18 +50,21 @@ The following **additional** features are implemented:
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
 
-The game features three difficulty levels:
-![](https://i.imgur.com/6lDTvXt.gif)
+The game features a dynamic button layout that stacks and spreads, a difficulty selection form and persistent counters for Round, Wins, Losses and current Strike count:
+![](https://i.imgur.com/kUM0RlP.gif)
 
-The difficulty selection resets once the current game has ended:
-![](https://i.imgur.com/XrqKg4C.gif)
+Users can stop the current game at any point and the round counter will erase that round from the count:
+![](https://i.imgur.com/AkSSh9u.gif)
 
-The game features a strike system and a strike counter is displayed when a mistake is made.
-The previous clue sequence repeats:
-![](https://i.imgur.com/od1rurK.gif)
+The difficultly selection form resets after each round:
+![](https://i.imgur.com/8Qsn8cR.gif)
 
 Clue sequences play faster as the game progresses:
-![](https://i.imgur.com/lzAthL8.gif)
+![](https://i.imgur.com/IcTyjB6.gif)
+
+Users can reset the counters using a reset button:
+![](https://i.imgur.com/TqH7fa0.gif)
+
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
@@ -90,8 +96,7 @@ I also have questions about web security and how to develop an application that 
 The first thing I would want to work on would be optimizing this project for mobile/touchscreen devices. When making this project more unique and adding optional features, I incorporated pictures of my children as I imagined my daughter being able to experience the game, and what fun that would be for her. My daughter is only 2 years old and she doesn’t know how to use a mouse yet. 
 This limits her ability to play along. I opened the project in my phone’s browser and noticed that the buttons don’t make sounds or display images when touched and that they’re all in a single column. Therefore you can only see the first few buttons and not all 8 buttons at once. This makes it so you can’t see the clue sequence that plays and you can’t get feedback when buttons are pressed. 
 It would be fun to learn how to optimize this project for a touchscreen browser. I think my daughter would really love to be able to play this memory game with pictures of her and her brother, and perhaps showing her that you can make something like this would inspire her creativity. I would also want to work more on the design of the project via the CSS and HTML. 
-I would want to spend more time making the UI feel and look more aesthetically pleasing and professional. I spent most of my time in the project programming the JavaScript, and I think improving the UI could give me an opportunity to become more familiar and fluent with CSS and HTML. Other ideas would include: custom audio for the buttons and audio that plays when the game is won/lost, 
-a win/loss counter that persists, and dynamic images for the buttons that move around after each game.
+I would want to spend more time making the UI feel and look more aesthetically pleasing and professional. I spent most of my time in the project programming the JavaScript, and I think improving the UI could give me an opportunity to become more familiar and fluent with CSS and HTML. Other ideas would include: custom audio for the buttons and audio that plays when the game is won/lost, and dynamic images for the buttons that move around after each game.
 
 
 ## Interview Recording URL Link
