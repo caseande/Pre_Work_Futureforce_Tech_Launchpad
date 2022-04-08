@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Memory Game</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <h1>Amelie and Julian's Hide and Seek Memory Game</h1>
+    <p>Welcome to the game!<br>
+    Repeat back the pattern by pressing the corresponding buttons in the correct order.<br>
+    As the sequence grows, the clues play faster!</p>
+   <label id="diffTxt">Choose a difficulty:</label>
+   <label id="stopTxt" class="hidden">Stop Game:</label>
+      <select id="lvl" onchange ="setLevel(value)">
+        <option value="" selected="selected">Select One</option>
+        <option value="Easy">Easy</option>
+        <option value="Medium">Medium</option>
+        <option value="Hard">Hard</option>
+      </select>
+    <button id="startBtn" onclick="startGame()" class="hidden">Start</button>
+    <button id="stopBtn" onclick="stopGame()" class="hidden">Stop</button>
+    <button id="resetBtn" onclick="resetCounts()" class="hidden">Reset</button>
+    <br>
+     <label id="round">Round:</label><br>
+     <label id="wins">Wins:</label><br>
+     <label id="losses">Losses:</label>
+    <br>
+    <div id="gameButtonArea">
+      <button id="button1" class="stacked lit" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone()"></button>
+      <button id="button2" class="stacked lit" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone()"></button>
+      <button id="button3" class="stacked lit" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone()"></button>
+      <button id="button4" class="stacked lit" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone()"></button>
+      <br>
+      <button id="button5" class="stacked lit" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone()"></button>
+      <button id="button6" class="stacked lit" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone()"></button>
+      <button id="button7" class="stacked lit" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone()"></button>
+      <button id="button8" class="stacked lit" onclick="guess(8)" onmousedown="startTone(8)" onmouseup="stopTone()"></button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+
+/* default to border-box */
+html 
+{
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after 
+{
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body 
+{
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: lightseagreen;
+  color: white;
+}
+
+h1 
+{
+  font-family: verdana, arial, sans-serif;
+}
+
+p 
+{
+  font-family: verdana, arial, sans-serif;
+}
+
+button 
+{
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.hidden 
+{
+  display: none;
+}
+
+.off
+{
+  pointer-events: none;
+}
+
+#gameButtonArea > button
+{
+  width:200px;
+  height:200px;
+}
+
+#gameButtonArea 
+{
+  margin:33px;
+}
+
+#button1
+{
+  background: lightgreen;
+}
+
+#button1:active, #button1.lit
+{
+  /*background: green;*/
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Amelie_1.png?v=1648354196997' );
+  background-size: 200px, 200px;
+}
+
+#button2
+{
+  background: lightblue;
+}
+
+#button2:active, #button2.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Julian_1.png?v=1648354357968' );
+  background-size: 200px, 200px;
+}
+
+#button3
+{
+  background: pink;
+}
+
+#button3:active, #button3.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Amelie_2.png?v=1648354551914' );
+  background-size: 200px, 200px;
+}
+
+#button4
+{
+  background: lightyellow;
+}
+
+#button4:active, #button4.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Julian_2.png?v=1648354694432' );
+  background-size: 200px, 200px;
+}
+
+#button5
+{
+  background: Plum;
+}
+
+#button5:active, #button5.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Amelie_Julian_1.png?v=1648355409192' );
+  background-size: 200px, 200px;
+}
+
+#button6
+{
+  background: Snow;
+}
+
+#button6:active, #button6.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Amelie_3.png?v=1648355046517' );
+  background-size: 200px, 200px;
+}
+
+#button7
+{
+  background: Turquoise;
+}
+
+#button7:active, #button7.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Amelie_Julian_2.png?v=1648355082524' );
+  background-size: 200px, 200px;
+}
+
+#button8
+{
+  background: Tan;
+}
+
+#button8:active, #button8.lit
+{
+  background-image: url( 'https://cdn.glitch.global/13fdf794-8965-4e0c-b2b8-f985313a9b63/Julian_3.png?v=1648355250402' );
+  background-size: 200px, 200px;
+}
+
+.stacked
+{
+  margin:-33px;
+}
+
+.spread
+{
+  margin: 2px 2px 2px;
+}
+
