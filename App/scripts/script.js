@@ -89,6 +89,7 @@ function startGame()
   
   // hide difficulty select form
   document.getElementById("lvl").classList.add("hidden");
+  
   // show stop label text, hide difficulty select text
   document.getElementById("diffTxt").classList.add("hidden");
   document.getElementById("stopTxt").classList.remove("hidden");
@@ -116,12 +117,15 @@ function stopGame(x)
   resetForm();
   resetGameArea();
   document.getElementById("resetBtn").classList.remove("hidden");
+  
   // show difficulty select form
   document.getElementById("lvl").classList.remove("hidden");
+  
   // hide stop label text, show difficulty select text
   document.getElementById("diffTxt").classList.remove("hidden");
   document.getElementById("stopTxt").classList.add("hidden");
-  // if arg is present, decrement round count game was manually stopped
+  
+  // if arg is present, decrement round count as game was manually stopped
   if(x == 1)
     {
       round_count--;
@@ -180,11 +184,6 @@ function loseGame()
   strike_count = 0;
   updateCounts();
   document.getElementById("resetBtn").classList.remove("hidden");
-  // show difficulty select form
-  document.getElementById("lvl").classList.remove("hidden");
-  // hide stop label text, show difficulty select text
-  document.getElementById("diffTxt").classList.remove("hidden");
-  document.getElementById("stopTxt").classList.add("hidden");
 }
 
 /********************************************************
@@ -201,11 +200,6 @@ function winGame()
   strike_count = 0;
   updateCounts();
   document.getElementById("resetBtn").classList.remove("hidden");
-  // show difficulty select form
-  document.getElementById("lvl").classList.remove("hidden");
-  // hide stop label text, show difficulty select text
-  document.getElementById("diffTxt").classList.remove("hidden");
-  document.getElementById("stopTxt").classList.add("hidden");
 }
 
 /********************************************************
