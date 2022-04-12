@@ -1,6 +1,6 @@
 # Pre-work - Amelie and Julian's Hide and Seek Memory Game
 
-Amelie and Julian's Hide and Seek is a Light & Sound Memory game to apply for CodePath's SITE Program. 
+Amelie and Julian's Hide and Seek is a Light & Sound Memory game to apply for CodePath's Futureforce Tech Launchpad (Salesforce).
 
 Submitted by: Casey Anderson
 
